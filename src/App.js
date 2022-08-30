@@ -1,7 +1,10 @@
+import NavBar from "./components/NavBar";
+import "./components/app/style.css"
+
 function App() {
   return (
     <div className="App">
-      <h1>Mi tienda</h1>
+      <header><NavBar/></header>
     </div>
   );
 }
