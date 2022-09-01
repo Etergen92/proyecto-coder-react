@@ -5,7 +5,7 @@
     box-sizing: content-box;
 }
 .navBar{
-    background-color: #0078AA;
+    background-color: #395B64;
     display: flex;
     justify-content: space-between;
 }
@@ -35,11 +35,21 @@
     height: 20px;
     border-radius: 10px;
     border: none;
-    background-color: #F6F6F6;
+    background-color: #A5C9CA;
 }
 
 
 .botonNav>a{
     text-decoration: none;
     color: black;
+}
+
+.carritoCompras{
+    width: 40px;
+    margin: 25px;
+}
+
+.tituloPaginaInicio{
+    text-align: center;
+    margin: 10px;
 }
