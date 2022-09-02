@@ -31,8 +31,8 @@
 .botonesNav>button{
     list-style-type: none;
     margin: 40px;
-    width: 70px;
-    height: 20px;
+    width: 100px;
+    height: 40px;
     border-radius: 10px;
     border: none;
     background-color: #A5C9CA;
@@ -46,10 +46,40 @@
 
 .carritoCompras{
     width: 40px;
-    margin: 25px;
+    margin: 45px;
 }
 
 .tituloPaginaInicio{
     text-align: center;
     margin: 10px;
+}
+
+/* CSS Item Count */
+
+.estiloContador{
+    display: flex;
+}
+
+.tamanioEtiqueta{
+    width: 100px;
+}
+
+.botonContador{
+    width: 30px;
+    border-style: none;
+}
+
+.contadorCantidad{
+    width: 150px;
+    text-align: center;
+}
+
+.btn-group{
+    margin-left: 40px;
+}
+
+.botonAnadir{
+    margin-top: 10px;
+    margin-left: 40px;
+    width: 220px;
 }
