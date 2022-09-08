@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 
 const ItemCount = ({stock}) => {
-  const[cantidad = 1, setContador] = useState()
+  const[cantidad, setContador] = useState(1)
   return (
     <>
       <div className="estiloContador">

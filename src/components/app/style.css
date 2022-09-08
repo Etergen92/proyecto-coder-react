@@ -83,3 +83,13 @@
     margin-left: 40px;
     width: 220px;
 }
+
+/* Tarjetas productos */
+
+.tarjetasProductos{
+    display: flex;
+    margin: 40px;
+    gap: 15px;
+
+
+}
