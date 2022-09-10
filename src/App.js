@@ -2,7 +2,7 @@ import NavBar from "./components/NavBar";
 import "./components/app/style.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from "./components/ItemListContainer";
-import ItemCount from "./components/ItemCount";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <header><NavBar/></header>
       <ItemListContainer greetings={"Bienvenido a la Disco Tienda"}/>
-      <ItemCount stock={12}/>
+      <ItemDetailContainer/>
     </div>
   );
 }

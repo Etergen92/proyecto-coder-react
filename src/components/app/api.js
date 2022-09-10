@@ -34,5 +34,21 @@ export const llamarProductos = () => {
     return tarea;
 }
 
+export const getItem = () => new Promise((resolve, reject) =>{
+    setTimeout(() => resolve(
+      {
+        "disco": "Disco 1",
+        "artista": "Artista 1",
+        "precio": 6500,
+        "año": 2010,
+        "stock": 20,
+        "genero" : "rock",
+        "formato": "vinilo",
+        "origen": "uk",
+        "img": "vinilo-prueba.jpg"
+      }
+    ), 2000);
+  }) 
+
 
 
