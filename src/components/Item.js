@@ -3,16 +3,26 @@ import foto from "./assets/vinilo-prueba.jpg"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-const Item = (producto) => {
+const Item = ({id, artista, disco, precio}) => {
     return(
       <div>
-        <Card key={producto.id} style={{ width: '18rem' }}>
+        {/* <Card key={producto.id} style={{ width: '18rem' }}>
            <Card.Img variant="top" src={foto}/>
            <Card.Body>
              <Card.Title>{producto.disco}</Card.Title>
              <Card.Text>{producto.artista}</Card.Text>
              <Card.Text>${producto.precio}</Card.Text>
              <Card.Text>{producto.año}</Card.Text>
+             <Button variant="secondary">Ver Mas</Button>
+            </Card.Body>
+        </Card> */}
+
+        <Card key={id} style={{ width: '18rem' }}>
+           <Card.Img variant="top" src={foto}/>
+           <Card.Body>
+             <Card.Title>{disco}</Card.Title>
+             <Card.Text>{artista}</Card.Text>
+             <Card.Text>${precio}</Card.Text>
              <Button variant="secondary">Ver Mas</Button>
             </Card.Body>
         </Card>

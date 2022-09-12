@@ -23,10 +23,9 @@ return(
               artista={producto.artista}
               disco={producto.disco}
               precio={producto.precio}
-              año={producto.año}
-              img={producto.img}
               />
           })
+          
         }  
       </div>
     )

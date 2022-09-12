@@ -92,3 +92,12 @@
 .detalleProducto{
     text-align: center;
 }
+
+.detalleProductoFlex{
+    display: flex;
+    gap: 200px;
+}
+
+.detalleProductoFlex_info{
+    align-self: center;
+}
