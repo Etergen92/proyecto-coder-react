@@ -26,27 +26,26 @@
 
 .botonesNav{
     display: flex;
+    
 }
 
-.botonesNav>button{
+.botonesNav>li{
     list-style-type: none;
     margin: 40px;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
+    width: 40px;
+    height: 30px;
     border: none;
-    background-color: #A5C9CA;
 }
 
-
-.botonNav>a{
-    text-decoration: none;
+.botonNav{
     color: black;
+    background-color: grey;
+    border-radius: 20px;
+    text-decoration: none;
 }
 
 .carritoCompras{
     width: 40px;
-    margin: 45px;
 }
 
 .tituloPaginaInicio{
@@ -84,6 +83,8 @@
 
 .tarjetasProductos{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 40px;
     gap: 15px;
 
@@ -98,6 +99,11 @@
     gap: 200px;
 }
 
+
 .detalleProductoFlex_info{
     align-self: center;
+    border: solid;
+    border-color: grey;
+    border-radius: 20px;
+    padding: 50px;
 }

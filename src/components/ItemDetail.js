@@ -3,7 +3,7 @@ import ItemCount from './ItemCount';
 import foto from "./assets/vinilo-prueba.jpg"
 
 
-const ItemDetail = ({producto}) => (
+const ItemDetail = ({id, artista, disco, genero, precio, stock}) => (
   <div className='detalleProducto'>
       <h1>Detalle de Producto</h1>
       <div className='detalleProductoFlex'>
@@ -11,13 +11,13 @@ const ItemDetail = ({producto}) => (
           <img src={foto} alt="producto"></img>
         </div>
         <div className='detalleProductoFlex_info'>
-          <h1>Disco: {producto.disco} </h1>
-          <h2>Artista: {producto.artista}</h2>
-          <h3>Genero: {producto.genero}</h3>
-          <h3>Año: {producto.año}</h3>
-          <h3>Formato: {producto.formato}</h3>
-          <h3>Origen: {producto.origen}</h3>
-          <ItemCount stock={producto.stock}/> 
+
+          <h1>ID: {id} </h1>
+          <h1>Artista: {artista}</h1>
+          <h1>Disco: {disco} </h1>
+          <h3>Genero: {genero}</h3>
+          <h3>Precio: {precio}</h3>
+          <ItemCount stock={stock}/> 
         </div>
       </div>
     </div>
