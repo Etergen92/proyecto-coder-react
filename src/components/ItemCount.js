@@ -5,18 +5,27 @@ import { useState } from 'react';
 
 
 
-const ItemCount = ({stock}) => {
-  const[cantidad, setContador] = useState(1)
+const ItemCount = ({stock, onAdd, initial}) => {
+  const[cantidad, setContador] = useState(initial);
+
+  const incrementar = () =>{
+    setContador(cantidad + 1)
+  } 
+
+  const decrementar = () =>{
+    setContador(cantidad - 1)
+  } 
+
   return (
     <>
       <div className="estiloContador">
         <ButtonGroup aria-label="Basic example">
-          <Button onClick={() => cantidad > 0 ? setContador(cantidad - 1) : cantidad}variant="secondary">-</Button>
+          <Button disabled={cantidad <= 1} onClick={decrementar}variant="secondary">-</Button>
           <p className="contadorCantidad d-inline">{cantidad}</p>
-          <Button onClick={() => cantidad < stock ? setContador(cantidad + 1) : cantidad} variant="secondary">+</Button>
+          <Button disabled={cantidad >= stock} onClick={incrementar} variant="secondary">+</Button>
       </ButtonGroup>
       </div>
-      <Button variant="secondary" className='botonAnadir'>Añadir al Carrito</Button>
+      <Button variant="secondary" className='botonAnadir'onClick={() => onAdd(cantidad)}>Añadir al Carrito</Button>
     </>
   )
 }
