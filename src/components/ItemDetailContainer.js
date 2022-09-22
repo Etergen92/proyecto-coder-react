@@ -15,14 +15,7 @@ const ItemDetailContainer = () => {
         }, [itemid])
 
   return (
-      <ItemDetail 
-        id={producto.id}
-        artista={producto.artista}
-        disco={producto.disco}
-        genero={producto.category}
-        precio={producto.precio}
-        stock={producto.stock}
-      />
+      <ItemDetail producto={producto} />
 )}
 
 export default ItemDetailContainer;

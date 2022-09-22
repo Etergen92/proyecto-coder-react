@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
+
 const Item = ({artista, disco, genero, precio, id}) => {
     return(
       <div>
