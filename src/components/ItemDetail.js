@@ -4,6 +4,7 @@ import foto from "./assets/vinilo-prueba.jpg"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from './app/CartContext';
+import { Button } from 'react-bootstrap';
 
 const ItemDetail = ({producto}) => {
 
@@ -16,27 +17,6 @@ const ItemDetail = ({producto}) => {
   }
 
 return(
-
-  // <div className='detalleProducto'>
-  //     <h1>Detalle de Producto</h1>
-  //     <div className='detalleProductoFlex'>
-  //       <div>
-  //         <img src={foto} alt="producto"></img>
-  //       </div>
-  //       <div className='detalleProductoFlex_info'>
-
-  //         <h1>ID: {id} </h1>
-  //         <h1>Artista: {artista}</h1>
-  //         <h1>Disco: {disco} </h1>
-  //         <h3>Genero: {genero}</h3>
-  //         <h3>Precio: {precio}</h3>{
-  //           irCarrito ?
-  //           <Link to={`/cart`}>Terminar Compra</Link>
-  //           :<ItemCount stock={stock} onAdd={onAdd} initial={1}/> 
-  //         }
-  //       </div>
-  //     </div>
-  //   </div>
     <div className='detalleProducto'>
       <h1>Detalle de Producto</h1>
       <div className='detalleProductoFlex'>
@@ -50,7 +30,7 @@ return(
           <h3>Genero: {producto.genero}</h3>
           <h3>Precio: {producto.precio}</h3>{
             irCarrito ?
-            <Link to={`/cart`}>Terminar Compra</Link>
+            <Link to={`/cart`}><Button variant="secondary">Terminar Compra</Button></Link>
             :<ItemCount stock={producto.stock} onAdd={onAdd} initial={1}/> 
           }
         </div>

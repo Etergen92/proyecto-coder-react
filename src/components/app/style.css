@@ -48,6 +48,17 @@
     width: 40px;
 }
 
+.flex-carrito{
+    display: flex;
+    gap: 15px;
+}
+
+.totalProductos{
+    font-size: 20px;
+    color: black;
+
+}
+
 .tituloPaginaInicio{
     text-align: center;
     margin: 10px;
@@ -106,4 +117,42 @@
     border-color: grey;
     border-radius: 20px;
     padding: 50px;
+}
+
+/* Carrito */
+
+.vistaCarrito{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: #395B64;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+}
+
+.botonEliminar{
+    width: 150px;
+    height: 60px;
+    align-self: center;
+    
+}
+
+.totalPrecioCompra, .carritoVacio{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.contenedorCarritoVacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.botonVerProductos{
+    margin: 20px;
 }
