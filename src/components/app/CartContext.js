@@ -1,5 +1,4 @@
 import React from 'react'
-// import { createContext } from 'react';
 import { useState, useContext } from 'react'
 
 export const useCartContext = () => useContext(CartContext);
@@ -22,8 +21,6 @@ const CartProvider = ({children}) => {
     }
 
     const totalProductos = () => cart.reduce((contador, producto)=> contador + producto.cantidad, 0)
-
-    console.log('carrito: ', cart)
 
     //Funcion para vaciar el carrito:
     const vaciarCart = () => setCart([]);

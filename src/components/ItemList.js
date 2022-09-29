@@ -1,8 +1,9 @@
 import Item from "./Item";
-import { llamarProductos } from './app/api'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
+
 
 const ItemList = () => {
 
@@ -10,16 +11,17 @@ const ItemList = () => {
   const {categoryid} = useParams();
 
   useEffect(() => {
-  if(categoryid){
-    llamarProductos().then(data => setProductos(data.filter(productos => productos.category === categoryid)));
-  }else{
-    llamarProductos().then((data)=>{
-      setProductos(data);  
-    })  
-  }
+    const querydb = getFirestore();
+    const queryCollection = collection(querydb, 'productos')
+    if(categoryid){
+      const queryFiltro = query(queryCollection, where('category', '==', categoryid))
+      getDocs(queryFiltro)
+        .then(res => setProductos(res.docs.map(producto => ({id: producto.id, ...producto.data()}))))
+    }else{
+      getDocs(queryCollection)
+        .then(res => setProductos(res.docs.map(producto => ({id: producto.id, ...producto.data()}))))
+    }
   }, [categoryid])
-
-
 
   return(
         <div className="tarjetasProductos">

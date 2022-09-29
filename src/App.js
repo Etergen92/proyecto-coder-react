@@ -2,6 +2,8 @@ import "./components/app/style.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Router from "./components/app/Router";
 import CartProvider from "./components/app/CartContext";
+import "./firebase/FirebaseConfig.js";
+
 
 
 function App() {

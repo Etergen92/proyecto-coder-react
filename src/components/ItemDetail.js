@@ -24,7 +24,6 @@ return(
           <img src={foto} alt="producto"></img>
         </div>  
         <div className='detalleProductoFlex_info'>
-          <h1>ID: {producto.id} </h1>
           <h1>Disco: {producto.disco} </h1>
           <h1>Artista: {producto.artista}</h1>
           <h3>Genero: {producto.genero}</h3>
