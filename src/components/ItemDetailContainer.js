@@ -17,8 +17,6 @@ const ItemDetailContainer = () => {
       .then(res => setProducto({id: res.id, ...res.data()}))
     }, [itemid])
 
-  
-
   return (
       <ItemDetail producto={producto} />
 )}
