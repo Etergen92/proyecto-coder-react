@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
     }, [itemid])
 
   return (
-      <ItemDetail producto={producto} />
+      <ItemDetail producto={producto}/>
 )}
 
 export default ItemDetailContainer;

@@ -4,10 +4,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from './app/CartContext';
 import { Button } from 'react-bootstrap';
-import foto from './assets/vinilo-prueba.jpg'
-// const albumImg = require.context('./assets/img', true)
-
-// albumImg(`./${producto.img}`)
 
 const ItemDetail = ({producto}) => {
 
@@ -24,7 +20,7 @@ return(
       <h1>Detalle de Producto</h1>
       <div className='detalleProductoFlex'>
         <div>
-          <img src={foto} alt="producto"></img>
+          <img src={`/${producto.img}`} alt="producto"></img>
         </div>  
         <div className='detalleProductoFlex_info'>
           <h1>Disco: {producto.disco} </h1>
