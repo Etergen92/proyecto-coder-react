@@ -1,15 +1,15 @@
 import React from 'react'
-import foto from "./assets/vinilo-prueba.jpg"
+// import foto from "./assets/vinilo-prueba.jpg"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 
-const Item = ({artista, disco, genero, precio, id}) => {
+const Item = ({artista, disco, genero, precio, id, img}) => {
     return(
       <div>
         <Card style={{ width: '18rem' }}>
-           <Card.Img variant="top" src={foto}/>
+           <Card.Img variant="top" src={img}/>
            <Card.Body>
              <Card.Title>{disco}</Card.Title>
              <Card.Text>{artista}</Card.Text>

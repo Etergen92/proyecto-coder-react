@@ -34,6 +34,7 @@ const ItemList = () => {
                 disco={producto.disco}
                 genero={producto.category}
                 precio={producto.precio}
+                img={producto.img}
                 />
             })
             

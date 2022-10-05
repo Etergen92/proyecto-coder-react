@@ -38,6 +38,7 @@ const Cart = () => {
   }
 
   const handleOrder = async (e) =>{
+   
     const date = new Date()
     e.preventDefault()
     const db = getFirestore();
@@ -51,14 +52,12 @@ const Cart = () => {
     // Alerta que notifica compra terminada con exito
     MySwal.fire({
       title: <strong>Compra Terminada</strong>,
-      html: <i>Recibiras en tu email el ID de compra</i>,
+      html: <i>Recibiras en tu email el ID de compra:</i>,
       icon: 'success'
     })
 
     // Limpieza de carrito una vez terminada la compra
     vaciarCart()
-
-
   }
  
   return (

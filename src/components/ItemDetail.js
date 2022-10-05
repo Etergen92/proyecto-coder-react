@@ -1,10 +1,13 @@
 import React from 'react'
 import ItemCount from './ItemCount';
-import foto from "./assets/vinilo-prueba.jpg"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from './app/CartContext';
 import { Button } from 'react-bootstrap';
+import foto from './assets/vinilo-prueba.jpg'
+// const albumImg = require.context('./assets/img', true)
+
+// albumImg(`./${producto.img}`)
 
 const ItemDetail = ({producto}) => {
 
