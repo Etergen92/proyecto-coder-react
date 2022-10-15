@@ -22,7 +22,7 @@ const Cart = () => {
     email: ''
   },
   )
-
+  
   const order = {
     productos: cart.map(producto =>({id: producto.id, disco: producto.disco, precio: producto.precio, cantidad: producto.cantidad})),
     total: totalPrecioCarrito() ,
@@ -31,14 +31,14 @@ const Cart = () => {
   if(cart.length === 0){
     return(
       <div className="contenedorCarritoVacio">
-        <p className="carritoVacio">No agregaste productos a tu carrito</p>
+        <p className="carritoVacio titulos">No agregaste productos a tu carrito</p>
         <Link to='/'><Button className="botonVerProductos" variant="secondary">Ver Productos</Button></Link>
       </div>
     ) 
   }
 
   const handleOrder = async (e) =>{
-   
+
     const date = new Date()
     e.preventDefault()
     const db = getFirestore();
@@ -46,23 +46,20 @@ const Cart = () => {
     addDoc(ordersCollection, {order, user, date})
 
     // ID de orden de compra
-    .then(({id}) => console.log(id))
 
-
-    // Alerta que notifica compra terminada con exito
-    MySwal.fire({
+    .then(({id}) =>  MySwal.fire({
       title: <strong>Compra Terminada</strong>,
-      html: <i>Recibiras en tu email el ID de compra:</i>,
+      html: <i>ID de compra: {(id)}</i>,
       icon: 'success'
-    })
+    }))
 
     // Limpieza de carrito una vez terminada la compra
     vaciarCart()
   }
- 
+
   return (
     <div>
-      <h1 style={{textAlign: "center"}}>Carrito</h1>  
+      <h1 style={{textAlign: "center"}} className='titulos'>Carrito</h1>  
       <div className="inicioCarrito">
         {
           cart.map(producto => <CartItemDetail key={producto.id} producto={producto} className='tarjetaCarrito'></CartItemDetail>)
@@ -71,8 +68,8 @@ const Cart = () => {
       <p className="totalPrecioCompra">Total: ${totalPrecioCarrito()}</p>
       
       <div className="seccionTerminarCompra">
-        <h1>Termina tu Compra</h1>
-        <Form onSubmit={handleOrder} className='formularioCompra'>
+        <h1 className="tituloFormulario titulos">Termina tu Compra</h1>
+        <Form onSubmit={handleOrder} className='formularioCompra cardShadow'>
           <Form.Group className="mb-3">
             <Form.Label>Nombre</Form.Label>
             <Form.Control type="text" placeholder="Ingrese su Nombre" value={user.nombre} onChange ={(e) => setUser({...user, nombre: e.target.value})}/>

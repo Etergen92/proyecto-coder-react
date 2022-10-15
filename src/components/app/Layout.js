@@ -1,13 +1,17 @@
 import { Outlet } from "react-router-dom"
 import NavBar from "../NavBar"
-
+import Footer from "../Footer"
+import bienvenida from '../assets/disco-inicio.png';
 
 const Layout = () => {
   return (
     <div>
         <NavBar/>
-        <h1 className="tituloPaginaInicio">"Bienvenido a la Disco Tienda"</h1>
+
+        <img src={bienvenida} className='imgBienvenida' alt="imagen disco"></img>
         <Outlet/>
+        <Footer/>
+        
     </div>
   )
 }

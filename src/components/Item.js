@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 const Item = ({artista, disco, genero, precio, id, img}) => {
     return(
       <div>
-        <Card style={{ width: '18rem' }}>
-           <Card.Img variant="top" src={`/${img}`}/>
+        <Card style={{ width: '18rem' }} className='cardShadow'>
+           <Card.Img variant="top" src={`/${img}`} className='imgTarjeta'/>
            <Card.Body>
              <Card.Title>{disco}</Card.Title>
              <Card.Text>{artista}</Card.Text>

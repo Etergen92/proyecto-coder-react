@@ -17,18 +17,21 @@ const ItemDetail = ({producto}) => {
 
 return(
     <div className='detalleProducto'>
-      <h1>Detalle de Producto</h1>
+      <h1 className='titulos'>Detalle de Producto</h1>
       <div className='detalleProductoFlex'>
         <div>
-          <img src={`/${producto.img}`} alt="producto"></img>
+          <img src={`/${producto.img}`} className='imgDetalle cardShadow' alt="producto"></img>
         </div>  
-        <div className='detalleProductoFlex_info'>
+        <div className='detalleProductoFlex_info cardShadow'>
           <h1>Disco: {producto.disco} </h1>
           <h1>Artista: {producto.artista}</h1>
-          <h3>Genero: {producto.genero}</h3>
-          <h3>Precio: {producto.precio}</h3>{
+          <h3>Genero: {producto.category}</h3>
+          <h3>Precio: ${producto.precio}</h3>{
             irCarrito ?
-            <Link to={`/cart`}><Button variant="secondary">Terminar Compra</Button></Link>
+            <div>  
+              <Link to={`/cart`}><Button variant="secondary" className='terminarCompra'>Terminar Compra</Button></Link>
+              <Link to={`/`}><Button variant="secondary">Seguir Comprando</Button></Link>
+            </div>
             :<ItemCount stock={producto.stock} onAdd={onAdd} initial={1}/> 
           }
         </div>

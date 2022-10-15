@@ -3,10 +3,9 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { useState } from 'react';
 
 
-
-
 const ItemCount = ({stock, onAdd, initial}) => {
   const[cantidad, setContador] = useState(initial);
+  
 
   const incrementar = () =>{
     setContador(cantidad + 1)
@@ -25,7 +24,7 @@ const ItemCount = ({stock, onAdd, initial}) => {
           <Button disabled={cantidad >= stock} onClick={incrementar} variant="secondary">+</Button>
       </ButtonGroup>
       </div>
-      <Button variant="secondary" className='botonAnadir'onClick={() => onAdd(cantidad)}>Añadir al Carrito</Button>
+      <Button variant="secondary" className='botonAnadir'onClick={() => onAdd(cantidad) }>Añadir al Carrito</Button>
     </>
   )
 }

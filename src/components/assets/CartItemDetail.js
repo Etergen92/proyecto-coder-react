@@ -7,7 +7,7 @@ const CartItemDetail = ({producto}) => {
   return (
     <div className='vistaCarrito'>
         <div>
-          <img src='' alt='imagen producto'></img>
+          <img src={`/${producto.img}`} className='productoCarrito' alt='imagen producto'></img>
         </div>
         <div>
           <h3>Producto</h3>

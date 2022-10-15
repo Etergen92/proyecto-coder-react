@@ -3,11 +3,20 @@
     margin: 0;
     padding: 0;
     box-sizing: content-box;
+    
 }
+
 .navBar{
     background-color: #395B64;
     display: flex;
     justify-content: space-between;
+}
+
+.imgBienvenida{
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+    object-position: 15% 95%;
 }
 
 .tituloLogo{
@@ -17,6 +26,8 @@
 .tituloNavBar{
     align-self: center;
     margin-left: 20px;
+    font-weight: 900;
+    color: black;
 }
 
 .logoTienda{
@@ -56,7 +67,11 @@
 .totalProductos{
     font-size: 20px;
     color: black;
+    text-decoration: none;
+}
 
+a:link, a:visited, a:active {
+    text-decoration:none;
 }
 
 .tituloPaginaInicio{
@@ -96,9 +111,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 40px;
-    gap: 15px;
+    margin: 20px;
+    gap: 75px;
+    
+}
 
+.cardShadow{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.26);
 }
 
 .detalleProducto{
@@ -128,6 +147,7 @@
     border: 1px;
     border-style: solid;
     border-color: #395B64;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.26);
     border-radius: 10px;
     margin: 20px;
     text-align: center;
@@ -146,11 +166,23 @@
     font-size: 35px;
 }
 
+.totalPrecioCompra{
+    background-color: #6c757d;
+    width: 15%;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-weight: 500;
+    color: white;
+    padding: 10px;
+}
+
+
 .contenedorCarritoVacio{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    padding: 200px;
 }
 
 .botonVerProductos{
@@ -168,4 +200,45 @@
     border-radius: 5px;
     border-color: #395B64;
     padding: 60px;
+    margin-bottom: 55px;
+}
+
+
+.imgTarjeta{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.imgDetalle{
+    width: 600px;
+    height: 600px;
+    border-radius: 15px;
+    margin-left: 35px;
+    margin-bottom: 75px;
+}
+
+.productoCarrito{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 3px;
+}
+
+.terminarCompra{
+    margin: 10px;
+}
+
+.tituloFormulario{
+    margin: 50px;
+}
+
+.copyright{
+    margin-top: 80px;
+    padding: 10px;
+    color: black;
+}
+
+.titulos{
+    font-weight: 900;
+    font-size: xxx-large;
+    margin-bottom: 70px;
 }
